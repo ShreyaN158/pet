@@ -1,0 +1,114 @@
+body{
+background:#222;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+color:white;
+}
+
+.container{
+text-align:center;
+}
+
+/* PET BODY */
+
+#pet{
+position:relative;
+width:120px;
+height:120px;
+background:#ffb347;
+border-radius:50%;
+margin:30px auto;
+}
+
+/* ears */
+
+.ear{
+width:40px;
+height:40px;
+background:#ffb347;
+position:absolute;
+top:-15px;
+border-radius:50%;
+}
+
+.ear.left{
+left:5px;
+}
+
+.ear.right{
+right:5px;
+}
+
+/* face */
+
+.eye{
+width:12px;
+height:12px;
+background:black;
+border-radius:50%;
+position:absolute;
+top:45px;
+}
+
+.eye.left{
+left:35px;
+}
+
+.eye.right{
+right:35px;
+}
+
+.mouth{
+width:30px;
+height:6px;
+background:black;
+position:absolute;
+bottom:30px;
+left:45px;
+border-radius:10px;
+}
+
+/* ANIMATIONS */
+
+/* happy */
+.happy{
+animation:bounce 1s infinite;
+}
+
+/* hungry */
+.hungry{
+animation:shake 0.2s infinite;
+}
+
+/* sleepy */
+.sleepy{
+animation:tilt 2s infinite;
+}
+
+/* sleeping */
+.sleep{
+opacity:0.4;
+}
+
+@keyframes bounce{
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
+}
+
+@keyframes shake{
+0%{transform:translateX(0)}
+25%{transform:translateX(-5px)}
+50%{transform:translateX(5px)}
+75%{transform:translateX(-5px)}
+100%{transform:translateX(0)}
+}
+
+@keyframes tilt{
+0%{transform:rotate(0)}
+50%{transform:rotate(10deg)}
+100%{transform:rotate(0)}
+}
